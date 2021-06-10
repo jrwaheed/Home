@@ -1,4 +1,8 @@
-import java.sql.Array;
+package Observers;
+
+import Interfaces.ActionTaker;
+import Interfaces.Observers;
+
 import java.util.ArrayList;
 import java.util.List;
 

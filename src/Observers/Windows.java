@@ -1,3 +1,7 @@
+package Observers;
+
+import Interfaces.ActionTaker;
+
 public class Windows implements ActionTaker {
     @Override
     public void info(int temperature) {
@@ -7,12 +11,12 @@ public class Windows implements ActionTaker {
     @Override
     public void Action(int temperature ) {
         if (temperature < 25 && temperature > 19){
-            System.out.println("Windows stay where they are");
+            System.out.println("Observers.Windows stay where they are");
         }
         else if (temperature >= 25){
-            System.out.println("Windows up.");
+            System.out.println("Observers.Windows up.");
         } else {
-            System.out.println("Windows down.");
+            System.out.println("Observers.Windows down.");
         }
     }
 }

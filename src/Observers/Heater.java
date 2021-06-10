@@ -1,3 +1,7 @@
+package Observers;
+
+import Interfaces.ActionTaker;
+
 public class Heater implements ActionTaker {
     @Override
     public void info(int temperature) {
@@ -11,9 +15,9 @@ public class Heater implements ActionTaker {
             System.out.println("Maintaining temperature");
         }
         else if (temperature >= 25){
-            System.out.println("Heater off.");
+            System.out.println("Observers.Heater off.");
         } else {
-            System.out.println("Heater activated.");
+            System.out.println("Observers.Heater activated.");
         }
     }
 }

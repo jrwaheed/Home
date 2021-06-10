@@ -1,4 +1,7 @@
-import java.util.ArrayList;
+import Observers.Heater;
+import Observers.Mobile;
+import Observers.Sensor;
+import Observers.Windows;
 
 public class Main {
     public static void main(String[] args) {
