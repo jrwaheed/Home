@@ -6,21 +6,32 @@ public class Sensor {
 
     private int temperature;
     private List<Observers> observerList;
+    private List<ActionTaker>actionTakerList;
 
-    public Sensor(int temperature, List<Observers> observerList) {
+
+    public Sensor(int temperature) {
         this.temperature = temperature;
         this.observerList = new ArrayList<Observers>();
+        this.actionTakerList = new ArrayList<>();
     }
 
 
-    public void addObserver(Observers observers){
+    public void addObserver(Observers observers, ActionTaker actionTaker){
         this.observerList.add(observers);
-}
+        this.actionTakerList.add(actionTaker);
+    }
 
-    public void informAll(int temperature, Observers observers){
+    public void sendSignal(){
+        informAll();
+    }
+
+    public void informAll(){
         for (Observers observer:this.observerList) {
             observer.info(this.temperature);
         }
-    }
+        for (ActionTaker actiontaker: this.actionTakerList) {
+            actiontaker.Action(this.temperature);
+            }
+        }
 }
 

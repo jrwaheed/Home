@@ -1,18 +1,19 @@
-public class Heater implements Observers{
+public class Heater implements ActionTaker {
     @Override
     public void info(int temperature) {
-        System.out.println("The heater is recording a temperature of " + temperature);
+        System.out.println("The windows are recording a temperature of " + temperature);
     }
 
-    public void heatUp(){
 
-    }
-
-    public void heatDown(){
-
-    }
-
-    public void heatSame(){
-
+    @Override
+    public void Action(int temperature) {
+        if (temperature < 25 && temperature > 19){
+            System.out.println("Maintaining temperature");
+        }
+        else if (temperature >= 25){
+            System.out.println("Heater off.");
+        } else {
+            System.out.println("Heater activated.");
+        }
     }
 }
