@@ -14,9 +14,9 @@ public class Windows implements ActionTaker {
             System.out.println("Observers.Windows stay where they are");
         }
         else if (temperature >= 25){
-            System.out.println("Observers.Windows up.");
+            System.out.println("Windows up.");
         } else {
-            System.out.println("Observers.Windows down.");
+            System.out.println("Windows down.");
         }
     }
 }

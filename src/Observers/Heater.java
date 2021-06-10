@@ -15,9 +15,9 @@ public class Heater implements ActionTaker {
             System.out.println("Maintaining temperature");
         }
         else if (temperature >= 25){
-            System.out.println("Observers.Heater off.");
+            System.out.println("Heater off.");
         } else {
-            System.out.println("Observers.Heater activated.");
+            System.out.println("Heater activated.");
         }
     }
 }
